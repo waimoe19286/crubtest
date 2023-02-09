@@ -21,17 +21,17 @@ const getSystem = async () => {
   }
 };
 getSystem();
-const btnDiv = document.querySelector(".buttondiv");
-const nameDiv = document.querySelector(".name");
-const emailDiv = document.querySelector(".email");
-const passwordDiv = document.querySelector(".password");
+// const btnDiv = document.querySelector(".buttondiv");
+// const nameDiv = document.querySelector(".name");
+// const emailDiv = document.querySelector(".email");
+// const passwordDiv = document.querySelector(".password");
 
-const register = async () => {
-  const response = await fetch("http://localhost:3000/users", {
-    method: "POST",
-    body: JSON.stringify({ name: nameDiv.value, email: emailDiv.value }),
-  });
-};
+// const register = async () => {
+//   const response = await fetch("http://localhost:3000/users", {
+//     method: "POST",
+//     body: JSON.stringify({ name: nameDiv.value, email: emailDiv.value }),
+//   });
+// };
 
 btnDiv.addEventListener("click", register);
 
