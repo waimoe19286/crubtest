@@ -35,12 +35,12 @@ const register = async () => {
 
 btnDiv.addEventListener("click", register);
 
-//file upload
-const fileuploadFun = async () => {
-  const fileValue = document.querySelector(".fileupload");
-  const response = await fetch("http://localhost:3000/fileupload", {
-    method: "POST",
-    body: fileValue.files[0],
-  });
-  console.log(await response.json());
-};
+// //file upload
+// const fileuploadFun = async () => {
+//   const fileValue = document.querySelector(".fileupload");
+//   const response = await fetch("http://localhost:3000/fileupload", {
+//     method: "POST",
+//     body: fileValue.files[0],
+//   });
+//   console.log(await response.json());
+// };

@@ -81,17 +81,18 @@ const server = http.createServer((req, res) => {
     } else {
       res.end();
     }
-  } else if (req.url === "/fileupload") {
-    let body = "";
-    req.on("data", (chunk) => {
-      body += chunk;
-    });
-    req.on("end", () => {
-      fs.writeFileSync("hello.txt", body);
-      res.writeHead(200, { "Content-Type": "application/json" });
-      res.write(JSON.stringify({ text: "File Upload is success..." }));
-      res.end();
-    });
+    // } else if (req.url === "/fileupload") {
+    //   let body = "";
+    //   req.on("data", (chunk) => {
+    //     body += chunk;
+    //   });
+    //   req.on("end", () => {
+    //     fs.writeFileSync("hello.txt", body);
+    //     res.writeHead(200, { "Content-Type": "application/json" });
+    //     res.write(JSON.stringify({ text: "File Upload is success..." }));
+    //     res.end();
+    //   });
+    // }
   } else {
     res.writeHead(404);
     res.write(`<h1>Unkown router<h1>`);
